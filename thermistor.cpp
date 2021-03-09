@@ -73,7 +73,7 @@ THERMISTOR::THERMISTOR(uint8_t adcPin, uint16_t nomRes, uint16_t bCoef, uint16_t
  *
  * @return temperature in 0.1 ºC
  */
-int THERMISTOR::read(char decimal)
+int THERMISTOR::read(char precision)
 {
   uint8_t i;
   uint16_t sample;
