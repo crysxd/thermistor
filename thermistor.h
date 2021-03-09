@@ -74,7 +74,7 @@ class THERMISTOR
      *
      * @return temperature in 0.01 ºC
      */
-    int read(void);
+    int read(char precision = 10);
 };
 
 #endif

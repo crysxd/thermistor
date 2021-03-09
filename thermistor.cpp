@@ -47,7 +47,7 @@
 #else
 #define ADC_RESOLUTION 1023
 #endif
-#define VERBOSE_SENSOR_ENABLED 1
+// #define VERBOSE_SENSOR_ENABLED 1
 /**
  * THERMISTOR
  * 
@@ -73,7 +73,7 @@ THERMISTOR::THERMISTOR(uint8_t adcPin, uint16_t nomRes, uint16_t bCoef, uint16_t
  *
  * @return temperature in 0.1 ºC
  */
-int THERMISTOR::read(void)
+int THERMISTOR::read(char decimal)
 {
   uint8_t i;
   uint16_t sample;
@@ -124,6 +124,6 @@ int THERMISTOR::read(void)
   Serial.println(" *C");
   #endif
   
-  return (int)(steinhart * 10);
+  return (int)(steinhart * precision);
 }
 
